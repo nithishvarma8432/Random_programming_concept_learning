@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Learn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div><h1>Programming Concepts Guide</h1></div>
+   
+    <div class ="first">
+    <div class="container">
+        <h1>Where ideas meet innovation</h1>
+        <p id="joke">Dive into the dynamic landscape of development, where ideas transform into reality and possibilities are endless!</p>
+    </div>
+    <div>
+        <button class="btn">DIVE</button>
+    </div>
+</div> 
+<script>
+  const btn = document.querySelector('.btn');
+  btn.addEventListener('click', function() {
+    const pages = [
+        'cs.html',
+        'ds.html',
+        'Functions.html',
+        'SBO.html',
+        'things.html',
+        'things2.html',
+        'things3.html'
+    ];
+    const randomPage = pages[Math.floor(Math.random() * pages.length)];
+    window.location.href = randomPage;
+});
+
+  </script>
+   
