@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Concepts</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Concepts: Modules, Libraries, and OOP</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#csharp">C#</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="python">
+            <h2>Python</h2>
+            <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It's widely used for web development, data analysis, artificial intelligence, scientific computing, and more.</p>
+            <article>
+                <h3>Modules and Libraries</h3>
+                <p>Modules and libraries in Python are collections of pre-written code that you can import and use in your programs to avoid writing code from scratch.</p>
+                <pre><code># Importing a module
+import math
+
+print(math.sqrt(16))  # Output: 4.0
+
+# Using a library
+import requests
+
+response = requests.get('https://api.example.com')
+print(response.status_code)</code></pre>
+            </article>
+        </section>
+        
+        <section id="javascript">
+            <h2>JavaScript</h2>
+            <p>JavaScript is a versatile, high-level programming language primarily used for web development. It enables interactive web pages and is an essential part of web applications, alongside HTML and CSS.</p>
+            <article>
+                <h3>DOM Manipulations</h3>
+                <p>DOM (Document Object Model) manipulations allow JavaScript to dynamically change the content, structure, and style of a web page.</p>
+                <pre><code>// Selecting an element
+let element = document.getElementById('myElement');
+
+// Changing content
+element.innerHTML = 'Hello, World!';
+
+// Changing style
+element.style.color = 'blue';
+
+// Adding an event listener
+element.addEventListener('click', function() {
+    alert('Element clicked!');
+});</code></pre>
+            </article>
+        </section>
+        
+        <section id="java">
+            <h2>Java</h2>
+            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It's widely used for building enterprise-scale applications.</p>
+            <article>
+                <h3>Object-Oriented Programming (OOP)</h3>
+                <p>Object-oriented programming (OOP) in Java involves creating classes and objects that model real-world entities.</p>
+                <pre><code>public class Animal {
+    private String name;
+    
+    // Constructor
+    public Animal(String name) {
+        this.name = name;
+    }
+    
+    // Method
+    public void makeSound() {
+        System.out.println(name + " makes a sound");
+    }
+    
+    // Getter
+    public String getName() {
+        return name;
+    }
+    
+    // Setter
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+// Creating an object
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Animal("Dog");
+        dog.makeSound();  // Output: Dog makes a sound
+    }
+}</code></pre>
+            </article>
+        </section>
+        
+        <section id="csharp">
+            <h2>C#</h2>
+            <p>C# (C-sharp) is a modern, object-oriented, and type-safe programming language. It is widely used for developing Windows applications, web applications, and games using the Unity game engine.</p>
+            <article>
+                <h3>Object-Oriented Programming (OOP)</h3>
+                <p>Object-oriented programming (OOP) in C# involves creating classes and objects that model real-world entities.</p>
+                <pre><code>public class Animal {
+    private string name;
+    
+    // Constructor
+    public Animal(string name) {
+        this.name = name;
+    }
+    
+    // Method
+    public void MakeSound() {
+        Console.WriteLine(name + " makes a sound");
+    }
+    
+    // Property
+    public string Name {
+        get { return name; }
+        set { name = value; }
+    }
+}
+
+// Creating an object
+public class Program {
+    public static void Main() {
+        Animal dog = new Animal("Dog");
+        dog.MakeSound();  // Output: Dog makes a sound
+    }
+}</code></pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Programming Concepts Guide</p>
+    </footer>
+</body>
+</html>

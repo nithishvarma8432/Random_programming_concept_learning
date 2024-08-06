@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Concepts: Error Handling, OOP, ES6, and Libraries</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Concepts in Python, JavaScript, Java, and C#</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#csharp">C#</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="python">
+            <h2>Python</h2>
+            <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It's widely used for web development, data analysis, artificial intelligence, scientific computing, and more.</p>
+            <article>
+                <h3>Error Handling</h3>
+                <p>Error handling in Python involves using try-except blocks to catch and handle exceptions that may occur during code execution.</p>
+                <pre><code>try:
+    # Code that may raise an exception
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+finally:
+    print("This will run regardless of an exception")</code></pre>
+            </article>
+            <article>
+                <h3>Basic Object-Oriented Programming</h3>
+                <p>Object-oriented programming (OOP) in Python involves creating classes and objects to model real-world entities.</p>
+                <pre><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        print(f"{self.name} makes a sound")
+
+# Creating an object
+dog = Animal("Dog")
+dog.make_sound()  # Output: Dog makes a sound</code></pre>
+            </article>
+        </section>
+        
+        <section id="javascript">
+            <h2>JavaScript</h2>
+            <p>JavaScript is a versatile, high-level programming language primarily used for web development. It enables interactive web pages and is an essential part of web applications, alongside HTML and CSS.</p>
+            <article>
+                <h3>ES6 Features</h3>
+                <p>ES6 (ECMAScript 2015) introduced many new features to JavaScript, including let/const, arrow functions, classes, and template literals.</p>
+                <pre><code>// let and const
+let x = 10;
+const y = 20;
+
+// Arrow functions
+const add = (a, b) => a + b;
+
+// Classes
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    makeSound() {
+        console.log(`${this.name} makes a sound`);
+    }
+}
+
+const dog = new Animal('Dog');
+dog.makeSound();  // Output: Dog makes a sound
+
+// Template literals
+const greeting = `Hello, ${dog.name}!`;
+console.log(greeting);  // Output: Hello, Dog!</code></pre>
+            </article>
+        </section>
+        
+        <section id="java">
+            <h2>Java</h2>
+            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It's widely used for building enterprise-scale applications.</p>
+            <article>
+                <h3>File Handling</h3>
+                <p>File handling in Java involves using classes like FileReader and FileWriter to read from and write to files.</p>
+                <pre><code>import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileHandlingExample {
+    public static void main(String[] args) {
+        // Writing to a file
+        try (FileWriter writer = new FileWriter("example.txt")) {
+            writer.write("Hello, World!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Reading from a file
+        try (FileReader reader = new FileReader("example.txt")) {
+            int character;
+            while ((character = reader.read()) != -1) {
+                System.out.print((char) character);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+            </article>
+            <article>
+                <h3>Basic Java Libraries</h3>
+                <p>Java libraries like java.util and java.io provide a wide range of utility classes for data structures, file handling, and more.</p>
+                <pre><code>import java.util.ArrayList;
+import java.util.HashMap;
+
+public class JavaLibrariesExample {
+    public static void main(String[] args) {
+        // Using ArrayList
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        System.out.println(list);
+
+        // Using HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("Apple", 1);
+        map.put("Banana", 2);
+        System.out.println(map);
+    }
+}</code></pre>
+            </article>
+        </section>
+        
+        <section id="csharp">
+            <h2>C#</h2>
+            <p>C# (C-sharp) is a modern, object-oriented, and type-safe programming language. It is widely used for developing Windows applications, web applications, and games using the Unity game engine.</p>
+            <article>
+                <h3>File Handling</h3>
+                <p>File handling in C# involves using classes like StreamReader and StreamWriter to read from and write to files.</p>
+                <pre><code>using System;
+using System.IO;
+
+public class FileHandlingExample {
+    public static void Main() {
+        // Writing to a file
+        using (StreamWriter writer = new StreamWriter("example.txt")) {
+            writer.WriteLine("Hello, World!");
+        }
+
+        // Reading from a file
+        using (StreamReader reader = new StreamReader("example.txt")) {
+            string line;
+            while ((line = reader.ReadLine()) != null) {
+                Console.WriteLine(line);
+            }
+        }
+    }
+}</code></pre>
+            </article>
+            <article>
+                <h3>Basic .NET Libraries</h3>
+                <p>.NET libraries like System.Collections and System.IO provide a wide range of utility classes for data structures, file handling, and more.</p>
+                <pre><code>using System;
+using System.Collections.Generic;
+
+public class DotNetLibrariesExample {
+    public static void Main() {
+        // Using List
+        List<string> list = new List<string> { "Apple", "Banana" };
+        Console.WriteLine(string.Join(", ", list));
+
+        // Using Dictionary
+        Dictionary<string, int> dict = new Dictionary<string, int> {
+            { "Apple", 1 },
+            { "Banana", 2 }
+        };
+        foreach (var kvp in dict) {
+            Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+        }
+    }
+}</code></pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Programming Concepts Guide</p>
+    </footer>
+</body>
+</html>
